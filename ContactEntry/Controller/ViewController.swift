@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableContacts: UITableView!
     @IBOutlet weak var searchEditText: UITextField!
     
+    var contacts: [Contact] = [Contact(firstName: "Stainley", lastName: "Lebron")]
+    
  
     @IBAction func createNewContact(_ sender: UIButton) {
-        
-        
+                
         let contactController: UIViewController! = storyboard?.instantiateViewController(identifier: "creationContactID")
         
         present(contactController, animated: true)
@@ -24,7 +25,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        self.tableContacts.dataSource = self
+        self.tableContacts.delegate = self
         
     }
 

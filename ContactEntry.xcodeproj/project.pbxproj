@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ADD5D72C296DA6A800222450 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5D72B296DA6A800222450 /* Contact.swift */; };
+		ADD5D72E296DA8E100222450 /* TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5D72D296DA8E100222450 /* TableExtension.swift */; };
 		ADD6E176296CF6AD00D431C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E175296CF6AD00D431C9 /* AppDelegate.swift */; };
 		ADD6E178296CF6AD00D431C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E177296CF6AD00D431C9 /* SceneDelegate.swift */; };
 		ADD6E17A296CF6AD00D431C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E179296CF6AD00D431C9 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		ADD5D72B296DA6A800222450 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		ADD5D72D296DA8E100222450 /* TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtension.swift; sourceTree = "<group>"; };
 		ADD6E172296CF6AD00D431C9 /* ContactEntry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactEntry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD6E175296CF6AD00D431C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD6E177296CF6AD00D431C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				ADD6E179296CF6AD00D431C9 /* ViewController.swift */,
 				ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */,
 				ADD6E18F296D9F4B00D431C9 /* CreationContactController.swift */,
+				ADD5D72D296DA8E100222450 /* TableExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				ADD6E17A296CF6AD00D431C9 /* ViewController.swift in Sources */,
 				ADD6E176296CF6AD00D431C9 /* AppDelegate.swift in Sources */,
 				ADD6E178296CF6AD00D431C9 /* SceneDelegate.swift in Sources */,
+				ADD5D72E296DA8E100222450 /* TableExtension.swift in Sources */,
 				ADD6E18E296D9E9E00D431C9 /* ContactDetailController.swift in Sources */,
 				ADD6E190296D9F4B00D431C9 /* CreationContactController.swift in Sources */,
 			);
