@@ -35,6 +35,16 @@
                                 <rect key="frame" x="16" y="139" width="361" height="679"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AB3-kg-ulk">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AB3-kg-ulk" id="ZrH-JX-96n">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -45,6 +55,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19k-cF-PUY" secondAttribute="trailing" constant="16" id="yHL-hH-AfS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addContactButton" destination="gM1-wV-Pfw" id="OHT-aw-YzP"/>
+                        <outlet property="searchEditText" destination="Iin-8n-wny" id="LYQ-Jd-MSp"/>
+                        <outlet property="tableContacts" destination="8qs-ia-cQc" id="04l-Rj-jgX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,36 +73,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-i3-NgD">
-                                <rect key="frame" x="16" y="75" width="361" height="727"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="544" translatesAutoresizingMaskIntoConstraints="NO" id="P6W-i3-NgD">
+                                <rect key="frame" x="16" y="75" width="361" height="761"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Z8c-V8-MaJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="692.66666666666663"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z8c-V8-MaJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="182.66666666666666"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBN-Tq-NTE">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="38.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gue-X5-WMm">
-                                                <rect key="frame" x="0.0" y="219.66666666666669" width="361" height="34"/>
+                                                <rect key="frame" x="0.0" y="48.333333333333329" width="361" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EM0-8r-cDX">
-                                                <rect key="frame" x="0.0" y="439" width="361" height="34"/>
+                                                <rect key="frame" x="0.0" y="96.333333333333343" width="361" height="38.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUs-VL-ZAe">
-                                                <rect key="frame" x="0.0" y="658.66666666666663" width="361" height="34"/>
+                                                <rect key="frame" x="0.0" y="144.66666666666666" width="361" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kRT-VK-ikn">
-                                        <rect key="frame" x="0.0" y="692.66666666666663" width="361" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="726.66666666666663" width="361" height="34.333333333333371"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKv-2X-eZq">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="34.333333333333336"/>
@@ -97,15 +112,18 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kRT-VK-ikn" firstAttribute="top" secondItem="P6W-i3-NgD" secondAttribute="top" constant="726.66666666666652" id="unc-xT-ZOE"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jLE-wx-ufe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P6W-i3-NgD" firstAttribute="leading" secondItem="jLE-wx-ufe" secondAttribute="leading" constant="16" id="aPb-EA-TvJ"/>
-                            <constraint firstItem="P6W-i3-NgD" firstAttribute="top" secondItem="jLE-wx-ufe" secondAttribute="top" constant="16" id="bSP-9d-1gZ"/>
-                            <constraint firstItem="jLE-wx-ufe" firstAttribute="bottom" secondItem="P6W-i3-NgD" secondAttribute="bottom" constant="16" id="q8l-fS-OBK"/>
-                            <constraint firstItem="jLE-wx-ufe" firstAttribute="trailing" secondItem="P6W-i3-NgD" secondAttribute="trailing" constant="16" id="sZ8-sf-m4K"/>
+                            <constraint firstItem="P6W-i3-NgD" firstAttribute="leading" secondItem="jLE-wx-ufe" secondAttribute="leading" constant="16" id="G0g-Mo-RbX"/>
+                            <constraint firstItem="P6W-i3-NgD" firstAttribute="top" secondItem="jLE-wx-ufe" secondAttribute="top" constant="16" id="mkR-oS-3fN"/>
+                            <constraint firstItem="jLE-wx-ufe" firstAttribute="trailing" secondItem="P6W-i3-NgD" secondAttribute="trailing" constant="16" id="nYg-8c-9OP"/>
+                            <constraint firstAttribute="bottom" secondItem="P6W-i3-NgD" secondAttribute="bottom" constant="16" id="ukD-8P-Qh8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -120,13 +138,40 @@
                     <view key="view" contentMode="scaleToFill" id="jVz-rv-MZY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="9af-1H-cAf">
+                                <rect key="frame" x="103" y="84" width="124.66666666666669" height="247"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRu-lO-Lcx">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AN5-lo-5ic">
+                                        <rect key="frame" x="0.0" y="71" width="124.66666666666667" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-DB-Wl0">
+                                        <rect key="frame" x="0.0" y="142" width="124.66666666666667" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcO-1f-bD9">
+                                        <rect key="frame" x="0.0" y="213" width="124.66666666666667" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YX8-d0-USY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX4-dT-ecH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="4"/>
+            <point key="canvasLocation" x="1490.8396946564885" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
