@@ -14,6 +14,7 @@
 		ADD6E17F296CF6AE00D431C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD6E17E296CF6AE00D431C9 /* Assets.xcassets */; };
 		ADD6E182296CF6AE00D431C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD6E180296CF6AE00D431C9 /* LaunchScreen.storyboard */; };
 		ADD6E18E296D9E9E00D431C9 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */; };
+		ADD6E190296D9F4B00D431C9 /* CreationContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E18F296D9F4B00D431C9 /* CreationContactController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ADD6E181296CF6AE00D431C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD6E183296CF6AE00D431C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
+		ADD6E18F296D9F4B00D431C9 /* CreationContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationContactController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				ADD6E179296CF6AD00D431C9 /* ViewController.swift */,
 				ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */,
+				ADD6E18F296D9F4B00D431C9 /* CreationContactController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				ADD6E176296CF6AD00D431C9 /* AppDelegate.swift in Sources */,
 				ADD6E178296CF6AD00D431C9 /* SceneDelegate.swift in Sources */,
 				ADD6E18E296D9E9E00D431C9 /* ContactDetailController.swift in Sources */,
+				ADD6E190296D9F4B00D431C9 /* CreationContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

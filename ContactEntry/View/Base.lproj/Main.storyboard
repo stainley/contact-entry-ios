@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Creation Contact Controller-->
         <scene sceneID="tCE-n3-TaV">
             <objects>
-                <viewController id="nMX-dp-0Hi" sceneMemberID="viewController">
+                <viewController id="nMX-dp-0Hi" customClass="CreationContactController" customModule="ContactEntry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJc-b4-Yy0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
