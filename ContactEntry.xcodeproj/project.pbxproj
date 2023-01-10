@@ -56,6 +56,9 @@
 		ADD6E174296CF6AD00D431C9 /* ContactEntry */ = {
 			isa = PBXGroup;
 			children = (
+				ADD6E189296CF6CD00D431C9 /* Model */,
+				ADD6E18A296CF78000D431C9 /* View */,
+				ADD6E18C296CF7AD00D431C9 /* Controller */,
 				ADD6E175296CF6AD00D431C9 /* AppDelegate.swift */,
 				ADD6E177296CF6AD00D431C9 /* SceneDelegate.swift */,
 				ADD6E179296CF6AD00D431C9 /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				ADD6E183296CF6AE00D431C9 /* Info.plist */,
 			);
 			path = ContactEntry;
+			sourceTree = "<group>";
+		};
+		ADD6E189296CF6CD00D431C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADD6E18A296CF78000D431C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADD6E18C296CF7AD00D431C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
