@@ -9,6 +9,10 @@ import UIKit
 
 class CreationContactController : UIViewController {
     
+    @IBAction func saveContactInfo(_ sender: UIButton) {
+    
+    }
+    
     override func viewDidLoad() {
         
     }

@@ -11,9 +11,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableContacts: UITableView!
     @IBOutlet weak var searchEditText: UITextField!
-    @IBOutlet weak var addContactButton: UIButton!
     
-
+ 
+    @IBAction func createNewContact(_ sender: UIButton) {
+        
+        
+        let contactController: UIViewController! = storyboard?.instantiateViewController(identifier: "creationContactID")
+        
+        present(contactController, animated: true)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
