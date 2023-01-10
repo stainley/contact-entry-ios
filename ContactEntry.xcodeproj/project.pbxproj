@@ -13,6 +13,7 @@
 		ADD6E17D296CF6AD00D431C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD6E17B296CF6AD00D431C9 /* Main.storyboard */; };
 		ADD6E17F296CF6AE00D431C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD6E17E296CF6AE00D431C9 /* Assets.xcassets */; };
 		ADD6E182296CF6AE00D431C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD6E180296CF6AE00D431C9 /* LaunchScreen.storyboard */; };
+		ADD6E18E296D9E9E00D431C9 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ADD6E17E296CF6AE00D431C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD6E181296CF6AE00D431C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD6E183296CF6AE00D431C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,6 @@
 				ADD6E18C296CF7AD00D431C9 /* Controller */,
 				ADD6E175296CF6AD00D431C9 /* AppDelegate.swift */,
 				ADD6E177296CF6AD00D431C9 /* SceneDelegate.swift */,
-				ADD6E179296CF6AD00D431C9 /* ViewController.swift */,
-				ADD6E17B296CF6AD00D431C9 /* Main.storyboard */,
 				ADD6E17E296CF6AE00D431C9 /* Assets.xcassets */,
 				ADD6E180296CF6AE00D431C9 /* LaunchScreen.storyboard */,
 				ADD6E183296CF6AE00D431C9 /* Info.plist */,
@@ -80,6 +80,7 @@
 		ADD6E18A296CF78000D431C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADD6E17B296CF6AD00D431C9 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +88,8 @@
 		ADD6E18C296CF7AD00D431C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ADD6E179296CF6AD00D431C9 /* ViewController.swift */,
+				ADD6E18D296D9E9E00D431C9 /* ContactDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				ADD6E17A296CF6AD00D431C9 /* ViewController.swift in Sources */,
 				ADD6E176296CF6AD00D431C9 /* AppDelegate.swift in Sources */,
 				ADD6E178296CF6AD00D431C9 /* SceneDelegate.swift in Sources */,
+				ADD6E18E296D9E9E00D431C9 /* ContactDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
