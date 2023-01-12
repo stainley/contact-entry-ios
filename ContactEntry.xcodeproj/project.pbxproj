@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		ADD5D72C296DA6A800222450 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5D72B296DA6A800222450 /* Contact.swift */; };
 		ADD5D72E296DA8E100222450 /* TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5D72D296DA8E100222450 /* TableExtension.swift */; };
+		ADD5D730296DC0F800222450 /* ContactDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5D72F296DC0F800222450 /* ContactDataSource.swift */; };
+		ADD5D733296E0CA200222450 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADD5D731296E0CA200222450 /* Model.xcdatamodeld */; };
 		ADD6E176296CF6AD00D431C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E175296CF6AD00D431C9 /* AppDelegate.swift */; };
 		ADD6E178296CF6AD00D431C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E177296CF6AD00D431C9 /* SceneDelegate.swift */; };
 		ADD6E17A296CF6AD00D431C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6E179296CF6AD00D431C9 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		ADD5D72B296DA6A800222450 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		ADD5D72D296DA8E100222450 /* TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtension.swift; sourceTree = "<group>"; };
+		ADD5D72F296DC0F800222450 /* ContactDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataSource.swift; sourceTree = "<group>"; };
+		ADD5D732296E0CA200222450 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		ADD6E172296CF6AD00D431C9 /* ContactEntry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactEntry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD6E175296CF6AD00D431C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD6E177296CF6AD00D431C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 		ADD6E169296CF6AD00D431C9 = {
 			isa = PBXGroup;
 			children = (
+				ADD5D731296E0CA200222450 /* Model.xcdatamodeld */,
 				ADD6E174296CF6AD00D431C9 /* ContactEntry */,
 				ADD6E173296CF6AD00D431C9 /* Products */,
 			);
@@ -80,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				ADD5D72B296DA6A800222450 /* Contact.swift */,
+				ADD5D72F296DC0F800222450 /* ContactDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,10 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD5D730296DC0F800222450 /* ContactDataSource.swift in Sources */,
 				ADD5D72C296DA6A800222450 /* Contact.swift in Sources */,
 				ADD6E17A296CF6AD00D431C9 /* ViewController.swift in Sources */,
 				ADD6E176296CF6AD00D431C9 /* AppDelegate.swift in Sources */,
 				ADD6E178296CF6AD00D431C9 /* SceneDelegate.swift in Sources */,
+				ADD5D733296E0CA200222450 /* Model.xcdatamodeld in Sources */,
 				ADD5D72E296DA8E100222450 /* TableExtension.swift in Sources */,
 				ADD6E18E296D9E9E00D431C9 /* ContactDetailController.swift in Sources */,
 				ADD6E190296D9F4B00D431C9 /* CreationContactController.swift in Sources */,
@@ -335,6 +343,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +372,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,6 +408,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ADD5D731296E0CA200222450 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADD5D732296E0CA200222450 /* Model.xcdatamodel */,
+			);
+			currentVersion = ADD5D732296E0CA200222450 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ADD6E16A296CF6AD00D431C9 /* Project object */;
 }

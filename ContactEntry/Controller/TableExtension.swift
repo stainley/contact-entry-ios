@@ -7,20 +7,21 @@
 
 import UIKit
 
-
-
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return contacts.count
+ 
+        return filteredContact.count
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+            
             tableView.beginUpdates()
+            filteredContact.remove(at: indexPath.row)
             contacts.remove(at: indexPath.row)
+        
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
             
@@ -34,9 +35,13 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCel")!
-        let contact = contacts[indexPath.row]
-        cell.textLabel?.text = "\(contact.getFirstName() + contact.getLastName())"
+        let contact = filteredContact[indexPath.row]
+        cell.textLabel?.text = "\(contact.getFirstName()) \(contact.getLastName())"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
     
@@ -45,5 +50,27 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     
+}
+
+
+extension ViewController:  UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredContact = []
+        if searchText == "" {
+            filteredContact = contacts
+        } else {
+            for contact in contacts {
+                let fullName = contact.getFirstName() + " " + contact.getLastName()
+                if fullName.lowercased().contains(searchText.lowercased()) {
+                    filteredContact.append(contact)
+                } else if ((contact.getPhoneNumber()?.contains(searchText.lowercased())) != nil) {
+                    filteredContact.append(contact)
+                }
+            }
+        }
+        
+        self.tableContacts.reloadData()
+    }
 }
 

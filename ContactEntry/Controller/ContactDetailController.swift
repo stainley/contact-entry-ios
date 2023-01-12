@@ -9,6 +9,13 @@ import UIKit
 
 class ContactDetailController: UIViewController {
     
+    @IBOutlet weak var firstNameText: UITextField!
+    @IBOutlet weak var lastNameText: UITextField!
+    @IBOutlet weak var phoneNumberText: UITextField!
+    @IBOutlet weak var emailText: UITextField!
+    
+        
+    
     override func viewDidLoad() {
         
     }
