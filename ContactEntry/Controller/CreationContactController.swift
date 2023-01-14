@@ -8,9 +8,7 @@
 import UIKit
 
 class CreationContactController : UIViewController {
-    
-    public weak var onContactDataDelegate: (any ContactDataSource)?
-    
+        
     @IBOutlet weak var firstNameText: UITextField!
 
     @IBOutlet weak var lastNameText: UITextField!
@@ -18,16 +16,15 @@ class CreationContactController : UIViewController {
     @IBOutlet weak var phoneNumberText: UITextField!
     
     @IBOutlet weak var emailText: UITextField!
+    
+    var contact: Contact?
         
     @IBAction func saveContactInfo(_ sender: UIButton) {
         
-        let contact: Contact = Contact(firstName: firstNameText.text ?? "", lastName: lastNameText.text ?? "", phoneNumber: phoneNumberText.text ?? "", email: emailText.text ?? "")
+        contact = Contact(firstName: firstNameText.text ?? "", lastName: lastNameText.text ?? "", phoneNumber: phoneNumberText.text ?? "", email: emailText.text ?? "")
         
-        onContactDataDelegate?.onContactDataDelegate(contact: contact)
-        dismiss(animated: true)
+        performSegue(withIdentifier: "unwindToViewController", sender: self)
+
     }
     
-    override func viewDidLoad() {
-        
-    }
 }

@@ -14,9 +14,14 @@ class ContactDetailController: UIViewController {
     @IBOutlet weak var phoneNumberText: UITextField!
     @IBOutlet weak var emailText: UITextField!
     
-        
+    var contact: Contact!
     
     override func viewDidLoad() {
         
+        self.firstNameText.text = contact.getFirstName()
+        self.lastNameText.text = contact.getLastName()
+        self.emailText.text = contact.getEmail()
+        self.phoneNumberText.text = contact.getPhoneNumber()
+
     }
 }

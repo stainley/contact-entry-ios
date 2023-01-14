@@ -8,7 +8,7 @@
 import Foundation
 
 struct Contact {
-    
+    private var id: Int = 0
     private var firstName: String
     private var lastName: String
     private var phoneNumber: String?
@@ -21,6 +21,14 @@ struct Contact {
         self.email = email
     }
       
+    func getId() -> Int {
+        return id
+    }
+    
+    mutating func setId(id: Int) {
+        self.id = id
+    }
+    
     
     func getFirstName() -> String {
         return firstName;

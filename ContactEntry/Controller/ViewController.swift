@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ContactDataSource {
+class ViewController: UIViewController {
   
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -19,21 +19,28 @@ class ViewController: UIViewController, ContactDataSource {
     
  
     @IBAction func createNewContact(_ sender: UIButton) {
-                
-        let contactController = storyboard?.instantiateViewController(identifier: "creationContactID") as! CreationContactController
-        contactController.onContactDataDelegate = self
-        show(contactController,sender: nil)
         
     }
     
-    func onContactDataDelegate(contact: Contact) {
-        print(contact.getFirstName())
-        contacts.append(contact)
-        filteredContact = contacts
-        tableContacts.reloadData()
-         
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "contactDetailSegue"  {
+            if let indexPath = tableContacts.indexPathForSelectedRow {
+                let contactDetailDestination = segue.destination as! ContactDetailController
+                contactDetailDestination.contact = self.contacts[indexPath.row]
+            }
+        }
     }
     
+    
+    @IBAction func unwind(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source as! CreationContactController
+        // Use data from the view controller which initiated the unwind segue
+        
+        contacts.append(sourceViewController.contact!)
+        filteredContact = contacts
+        tableContacts.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
