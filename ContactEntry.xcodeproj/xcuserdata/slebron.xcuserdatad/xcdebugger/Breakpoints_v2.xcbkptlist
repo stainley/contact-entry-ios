@@ -7,31 +7,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5EDF9FC2-44AE-401D-BA21-FF4C3802BF85"
+            uuid = "4C98CE39-7181-46DE-89A1-9B78701AE440"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ContactEntry/Controller/ViewController.swift"
+            filePath = "ContactEntry/Controller/ContactDetailController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "unwind(_:)"
-            landmarkType = "7">
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "ContactDetailController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A12648C1-3BDF-46D8-A928-3A94E26ED465"
+            uuid = "710CE2CA-73F8-4DDB-9B3F-D609AC47C1D5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ContactEntry/Controller/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

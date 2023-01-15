@@ -186,20 +186,38 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pWX-AG-uTm">
+                                <rect key="frame" x="16" y="759.66666666666663" width="361" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrw-rM-0G1">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                        <connections>
+                                            <action selector="editSave:" destination="u0O-Qj-GUZ" eventType="touchUpInside" id="kR2-0L-Zt1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YX8-d0-USY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YX8-d0-USY" firstAttribute="trailing" secondItem="9af-1H-cAf" secondAttribute="trailing" constant="16" id="M5M-8t-lgg"/>
                             <constraint firstItem="9af-1H-cAf" firstAttribute="top" secondItem="YX8-d0-USY" secondAttribute="top" constant="20" id="S9d-B0-4BZ"/>
+                            <constraint firstItem="pWX-AG-uTm" firstAttribute="leading" secondItem="YX8-d0-USY" secondAttribute="leading" constant="16" id="YPO-XE-DSb"/>
                             <constraint firstItem="9af-1H-cAf" firstAttribute="leading" secondItem="YX8-d0-USY" secondAttribute="leading" constant="16" id="dVz-Ab-dNq"/>
+                            <constraint firstItem="YX8-d0-USY" firstAttribute="trailing" secondItem="pWX-AG-uTm" secondAttribute="trailing" constant="16" id="f6m-XR-PIx"/>
+                            <constraint firstItem="YX8-d0-USY" firstAttribute="bottom" secondItem="pWX-AG-uTm" secondAttribute="bottom" constant="24" id="w5N-el-xQa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z4d-9Z-pj2"/>
                     <connections>
+                        <outlet property="editSaveButton" destination="rrw-rM-0G1" id="9cQ-j2-pr9"/>
                         <outlet property="emailText" destination="RcO-1f-bD9" id="kJd-C2-bFM"/>
                         <outlet property="firstNameText" destination="sRu-lO-Lcx" id="KL2-af-c2a"/>
                         <outlet property="lastNameText" destination="AN5-lo-5ic" id="pre-LH-gtI"/>
+                        <outlet property="loginButtonBottomConstraint" destination="w5N-el-xQa" id="xCe-ZD-acr"/>
                         <outlet property="phoneNumberText" destination="1c7-DB-Wl0" id="RAH-8I-M2K"/>
                     </connections>
                 </viewController>

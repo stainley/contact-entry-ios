@@ -40,24 +40,18 @@ extension ViewController: UITableViewDataSource {
         deleteAction.image = UIImage(systemName: "trash")
         
         let edit = UIContextualAction(style: .normal, title: "Edit", handler: {(action, view, completionHandler) in
+            self.indexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "contactDetailSegue", sender: self)
             
-            self.editContact(indexPath: indexPath)
             completionHandler(true)
         })
         edit.backgroundColor = UIColor.green
         edit.image = UIImage(systemName: "square.and.pencil")
         
-        return  UISwipeActionsConfiguration(actions: [deleteAction, edit])
+        let  preventSwipe = UISwipeActionsConfiguration(actions: [deleteAction, edit])
+        preventSwipe.performsFirstActionWithFullSwipe = false
+        return preventSwipe
     }
-    
-    
-    func editContact(indexPath: IndexPath) {
-        let contactDetailViewController: ContactDetailController = storyboard?.instantiateViewController(withIdentifier: "contactDetailID") as! ContactDetailController
-        
-        contactDetailViewController.contact = filteredContact[indexPath.row]
-        present(contactDetailViewController, animated: true)
-    }
-  
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCel")!
@@ -77,8 +71,7 @@ extension ViewController: UITableViewDataSource {
 
 
 extension ViewController: UITableViewDelegate {
-    
-   
+       
 }
 
 

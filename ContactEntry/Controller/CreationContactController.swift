@@ -27,4 +27,13 @@ class CreationContactController : UIViewController {
 
     }
     
+    override func viewDidLoad() {
+        guard let contact = contact else { return }
+        
+        firstNameText.text = contact.getFirstName()
+        lastNameText.text = contact.getLastName()
+        phoneNumberText.text = contact.getPhoneNumber()
+        emailText.text = contact.getEmail()
+    }
+    
 }

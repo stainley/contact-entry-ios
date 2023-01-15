@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var contacts: [Contact] = [Contact(firstName: "Stainley", lastName: "Lebron"), Contact(firstName: "Jothn", lastName: "Smith")]
     var filteredContact: [Contact]!
-    
+    var indexToEdit: Int = 0
  
     @IBAction func createNewContact(_ sender: UIButton) {
         
@@ -25,9 +25,16 @@ class ViewController: UIViewController {
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "contactDetailSegue"  {
+
             if let indexPath = tableContacts.indexPathForSelectedRow {
                 let contactDetailDestination = segue.destination as! ContactDetailController
-                contactDetailDestination.contact = self.contacts[indexPath.row]
+                
+                contactDetailDestination.contact = self.filteredContact[indexPath.row]
+            } else {
+                let contactDetailDestination = segue.destination as! ContactDetailController
+                
+                //contactDetailDestination.editSaveButton.isHidden = false
+                contactDetailDestination.contact = filteredContact[indexToEdit]
             }
         }
     }
